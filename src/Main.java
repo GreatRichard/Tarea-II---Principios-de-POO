@@ -1,22 +1,28 @@
-// Clase Main para probar el sistema
 public class Main {
     public static void main(String[] args) {
-        // Creación de instancias de Perro y Gato con sus respectivos nombres y edades
-        Perro perro = new Perro("Rex", 5);
-        Gato gato = new Gato("Mimi", 3);
+        // Creación de instancias de MontañaRusa, Noria y AutitosChocadores
+        MontañaRusa montañaRusa = new MontañaRusa("Montaña Rusa Extrema", 20, 5, "Alta");
+        Noria noria = new Noria("Noria Gigante", 30, 10, 50);
+        AutitosChocadores autitosChocadores = new AutitosChocadores("Autitos Chocadores", 15, 3, 10);
 
-        // Prueba de los métodos implementados en Perro
-        perro.hacerSonido();  // El perro ladra
-        perro.comer();        // El perro está comiendo
-        perro.beber();        // El perro está bebiendo
-        perro.dormir();       // El animal está durmiendo
-        perro.hacerTruco();   // El perro está haciendo un truco
-        perro.hacerTruco("saltar");  // El perro está haciendo el truco: saltar
+        // Prueba de los métodos implementados en MontañaRusa
+        montañaRusa.iniciar();             // La montaña rusa está en marcha
+        montañaRusa.detener();            // La atracción se ha detenido
+        montañaRusa.realizarMantenimiento(); // Realizando mantenimiento en la montaña rusa
+        System.out.println(montañaRusa.estadoMantenimiento()); // false
+        montañaRusa.aumentarIntensidad();  // Aumentando la intensidad de la montaña rusa
 
-        // Prueba de los métodos implementados en Gato
-        gato.hacerSonido();   // El gato maúlla
-        gato.comer();         // El gato está comiendo
-        gato.beber();         // El gato está bebiendo
-        gato.dormir();        // El animal está durmiendo
+        // Prueba de los métodos implementados en Noria
+        noria.iniciar();                  // La noria está girando
+        noria.detener();                 // La atracción se ha detenido
+        noria.realizarMantenimiento();    // Realizando mantenimiento en la noria
+        System.out.println(noria.estadoMantenimiento()); // false
+
+        // Prueba de los métodos implementados en AutitosChocadores
+        autitosChocadores.iniciar();      // Los autitos chocadores están en marcha
+        autitosChocadores.iniciar(8);    // Los autitos chocadores están en marcha con 8 autitos en funcionamiento
+        autitosChocadores.detener();     // La atracción se ha detenido
+        autitosChocadores.realizarMantenimiento(); // Realizando mantenimiento en los autitos chocadores
+        System.out.println(autitosChocadores.estadoMantenimiento()); // false
     }
 }
